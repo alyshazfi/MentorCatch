@@ -326,7 +326,6 @@ body {
 
 .mentor-content-index:hover {
   background-color: rgba(175, 175, 175, 0.4);
-  transform: scale(1.02);
 }
 
 .mentor-content-index img {

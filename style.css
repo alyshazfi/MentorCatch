@@ -184,19 +184,7 @@ body {
 }
 
 /* pricing */
-/* pricing */
-.pricing {
-  width: 60%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  text-align: justify;
-  margin: 100px auto;
-  line-height: 25px;
-}
-
-.pricing h3 {
+.index-pricing h3 {
   margin: 25px 0 25px 0;
   text-align: center;
   font-size: 32px;
@@ -204,7 +192,7 @@ body {
   color: var(--primary);
 }
 
-.pricing p {
+.index-pricing p {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -214,8 +202,11 @@ body {
   text-align: center;
 }
 
-.pricing-container {
+.index-pricing .pricing-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5%;
 }
 
 .pricing-card-basic {
@@ -224,8 +215,7 @@ body {
   padding-top: 20px;
   text-align: center;
   background-color: rgba(175, 175, 175, 0.7);
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
   border-radius: 15px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
@@ -236,8 +226,7 @@ body {
   padding-top: 20px;
   text-align: center;
   background-color: rgba(14, 101, 163, 0.5);
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
   border-radius: 15px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
@@ -248,8 +237,7 @@ body {
   padding-top: 20px;
   text-align: center;
   background-color: rgba(3, 59, 85, 0.45);
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
   border-radius: 15px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
@@ -294,8 +282,8 @@ body {
 .pricing-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #033b55;
-  color: #fff;
+  background-color: var(--second);
+  color: var(--primary);
   text-decoration: none;
   border-radius: 5px;
 }
@@ -1013,6 +1001,12 @@ table td {
 
   .mentor-container {
     flex-direction: column;
+  }
+
+  .index-pricing .pricing-container {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
   }
 }
 

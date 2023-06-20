@@ -18,16 +18,16 @@ body {
   justify-content: center;
 }
 
-/* Header 
+/* Header */
 .header {
   min-height: 100vh;
-  width: 100%;
+  width: auto;
   background-image: linear-gradient(rgb(217, 217, 217, 60%), 30%, rgb(255, 255, 255, 30%)), url(img/background-1.png);
   background-position: bottom, top;
   background-position: center;
   background-size: cover;
   position: relative;
-}*/
+}
 
 .hero .nav {
   display: flex;
@@ -53,24 +53,36 @@ body {
   font-size: 20px;
 }
 
-.hero .nav .nav-links {
-  list-style: none;
-  justify-content: space-between;
-  text-align: right;
-  display: inline-block;
-  flex: 1;
+.nav ul {
+  float: right;
+  margin-right: 20px;
 }
 
-.hero .nav .nav-links a {
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
   color: var(--primary);
   text-decoration: none;
   padding: 8px;
-  font-weight: bolder;
-  cursor: pointer;
+  font-weight: bold;
 }
 
-.hero .nav .nav-links a:hover {
+.nav ul li a:hover {
   color: var(--second);
+}
+
+.check-button {
+  font-size: 20px;
+  color: var(--primary);
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
 }
 
 .nav {
@@ -88,47 +100,6 @@ body {
   background-color: aliceblue;
   color: #033B55;
   border-bottom: 1px solid #033B55;
-}
-
-/*
-.nav-links ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
-  color: var(--primary);
-}
-
-.nav-links ul li a {
-  text-decoration: none;
-  font-size: 13;
-}
-
-.nav-links ul li::after {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: var(--second);
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-  width: 100%;
-} */
-
-.mask1 {
-  -webkit-mask-image: linear-gradient(black, transparent);
-  mask-image: linear-gradient(black, transparent);
-  background-position: center;
-  position: relative;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
 }
 
 /* Text and Button */
@@ -638,6 +609,10 @@ footer .cred p {
   color: #FDFEFE;
 }
 
+.btn-back span {
+  padding-left: 5px;
+}
+
 /* Filter End */
 
 .navbar-nav {
@@ -948,6 +923,42 @@ table td {
 /*Profile Part2 End*/
 
 /*Breakpoint*/
+@media (max-width: 858px) {
+  .check-button {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  .nav ul li {
+    display: block;
+    padding: 15px;
+  }
+
+  .nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a:active {
+    background: none;
+    color: var(--primary);
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
 /*Tablet*/
 @media (max-width: 768px) {
   html {

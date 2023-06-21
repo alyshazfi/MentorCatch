@@ -22,7 +22,7 @@ body {
 .header {
   min-height: 100vh;
   width: auto;
-  background-image: linear-gradient(rgb(217, 217, 217, 60%), 30%, rgb(255, 255, 255, 30%)), url(img/background-1.png);
+  background-image: linear-gradient(rgb(217, 217, 217, 70%), 60%, rgb(255, 255, 255, 60%)), url(img/background-1.png);
   background-position: bottom, top;
   background-position: center;
   background-size: cover;
@@ -665,7 +665,7 @@ footer .cred p {
 /*Mentor Start*/
 .mentor .row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: 1.5rem;
   margin-left: 10%;
   margin-right: 10%;
@@ -677,7 +677,8 @@ footer .cred p {
   border: 2px solid #2c7394;
   border-radius: 20px;
   height: fit-content;
-  width: 35vh;
+  width: fit-content;
+  margin: auto;
 }
 
 .mentor .row .mentor-card:hover {
@@ -697,7 +698,7 @@ footer .cred p {
 }
 
 .mentor-content {
-  padding: 30px;
+  padding: 20px;
 }
 
 .mentor .row .mentor-card .mentor-content h4 {
@@ -1075,6 +1076,10 @@ table td {
     flex-direction: column;
     width: 90%;
     align-items: center;
+  }
+
+  .mentor .row .mentor-card {
+    width: 20vh;
   }
 }
 

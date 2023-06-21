@@ -124,9 +124,9 @@ body {
 .index-button {
   background: var(--second);
   color: #FDFEFE;
+  border-radius: 10px;
   height: 30px;
   width: 85px;
-  border-radius: 10px;
   border: 0;
   outline: 0;
   margin-left: 0px;
@@ -148,7 +148,7 @@ body {
 
 .text-box p {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 18px;
   line-height: 25px;
   color: var(--primary);
@@ -282,10 +282,16 @@ body {
 .pricing-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: var(--second);
-  color: var(--primary);
   text-decoration: none;
-  border-radius: 5px;
+  background: var(--second);
+  color: #FDFEFE;
+  border-radius: 10px;
+}
+
+.pricing-button:hover {
+  background-color: white;
+  color: var(--primary);
+  cursor: pointer;
 }
 
 /* mentor */
@@ -406,6 +412,7 @@ body {
 }
 
 .section-title p {
+  width: 80%;
   text-align: center;
   max-width: 45rem;
   margin: auto;
@@ -474,7 +481,6 @@ footer .guide a {
   display: flex;
   font-size: small;
   font-weight: lighter;
-  text-decoration: underline;
 }
 
 footer .social a {
@@ -488,24 +494,27 @@ footer .social a:hover {
 }
 
 footer .reg a .btn-reg {
-  background-color: var(--second);
   font-weight: bold;
-  color: white;
   padding: 10px;
-  border-radius: 10px;
   margin-top: 10px;
   cursor: pointer;
   text-decoration: none;
+
+  background: var(--second);
+  color: #FDFEFE;
+  border-radius: 10px;
 }
 
 footer .reg a .btn-reg:hover {
   background-color: white;
   color: var(--primary);
+  cursor: pointer;
 }
 
 footer .cred p {
   color: white;
   font-size: smaller;
+  font-family: 'outfit', sans-serif;
 }
 
 /*Footer End*/
@@ -576,7 +585,7 @@ footer .cred p {
 }
 
 .search-box:hover .search-input {
-  width: 250px;
+  width: 190px;
   margin-left: 2px;
 }
 
@@ -593,36 +602,39 @@ footer .cred p {
 .btn {
   border: 2px solid var(--second);
   padding: 12px 16px;
-  background-color: transparent;
+  background-color: var(--second);
   font-weight: bold;
   border-radius: 25px;
   align-items: center;
   margin: 20px;
-  color: var(--primary);
+  color: white;
 }
 
 .active,
 .btn:hover {
-  background-color: var(--second);
+  background-color: white;
   color: var(--primary);
+  cursor: pointer;
 }
 
 .btn-back {
   border: 2px solid var(--second);
   padding: 12px 16px;
-  background-color: transparent;
   font-weight: bold;
-  border-radius: 25px;
   margin: 20px;
-  color: var(--primary);
   justify-content: left;
   align-items: center;
   text-align: center;
+
+  background: var(--second);
+  color: #FDFEFE;
+  border-radius: 10px;
 }
 
 .btn-back:hover {
-  background-color: var(--second);
-  color: #FDFEFE;
+  background-color: white;
+  color: var(--primary);
+  cursor: pointer;
 }
 
 .btn-back span {
@@ -665,6 +677,7 @@ footer .cred p {
   border: 2px solid #2c7394;
   border-radius: 20px;
   height: fit-content;
+  width: 35vh;
 }
 
 .mentor .row .mentor-card:hover {
@@ -707,17 +720,18 @@ footer .cred p {
 
 /*Pembagian Page Start*/
 .container-pembagian {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "content sidebar";
 }
 
 .two-thirds {
-  width: 72%;
   background-color: #ffffff;
   padding: 20px;
 }
 
 .one-third {
-  width: 28%;
   background-color: #ffffff;
   padding: 20px;
 }
@@ -726,13 +740,13 @@ footer .cred p {
 
 /* Booking Box Start*/
 .container-booking {
-  display: flex;
   font-family: 'outfit', sans-serif;
 }
 
 .sidebar-booking {
+  margin-top: 130px;
   position: fixed;
-  width: 350px;
+  width: 50vh;
   top: 0;
   background-color: transparent;
   border-radius: 10px;
@@ -741,8 +755,8 @@ footer .cred p {
   padding-right: 10px;
   padding-bottom: 18px;
   margin-right: 40px;
-  margin-top: 130px;
   border: 3px solid #033B55;
+  align-items: flex-start;
 }
 
 .tabs {
@@ -758,16 +772,18 @@ footer .cred p {
 
 .tab-btn {
   padding: 10px 20px;
-  background-color: #ffffff;
-  border: none;
-  cursor: pointer;
-  border: 2px solid #033B55;
   margin-left: 5px;
   margin-right: 5px;
   width: 95px;
+
+  border: 2px solid var(--second);
+  padding: 12px 16px;
+  background-color: var(--second);
+  font-weight: bold;
+  border-radius: 25px;
+  align-items: center;
   text-align: center;
-  border-radius: 10px;
-  color: #033B55;
+  color: white;
 }
 
 .tab-btn.active {
@@ -776,8 +792,9 @@ footer .cred p {
 }
 
 .tab-btn:hover {
-  background-color: var(--second);
-  color: #FDFEFE;
+  background-color: white;
+  color: var(--primary);
+  cursor: pointer;
 }
 
 .tab-content {
@@ -832,9 +849,16 @@ footer .cred p {
   border: none;
   cursor: pointer;
   margin-top: 25px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 27px;
   font-size: large;
+}
+
+#book-now-btn:hover {
+  background-color: white;
+  color: var(--primary);
+  cursor: pointer;
+  border: 2px solid var(--second);
 }
 
 .kalimat-cta {
@@ -943,6 +967,28 @@ table td {
 /*Profile Part2 End*/
 
 /*Breakpoint*/
+
+@media screen and (max-width: 1024px) {
+  .container-pembagian {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "content" "sidebar";
+  }
+
+  .Profile-Part2 {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 40px;
+  }
+
+  .sidebar-booking {
+    margin-top: 0px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media screen and (max-width: 858px) {
   .check-button {
     display: block;
@@ -981,6 +1027,25 @@ table td {
 
   #check:checked~ul {
     left: 0;
+  }
+
+  .container-pembagian {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "content" "sidebar";
+  }
+
+  .Profile-Part2 {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 40px;
+  }
+
+  .sidebar-booking {
+    margin-top: 0px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -125,8 +125,8 @@ body {
   background: var(--second);
   color: #FDFEFE;
   border-radius: 10px;
-  height: 30px;
-  width: 85px;
+  height: 40px;
+  width: 100px;
   border: 0;
   outline: 0;
   margin-left: 0px;
@@ -679,6 +679,7 @@ footer .cred p {
   height: fit-content;
   width: fit-content;
   margin: auto;
+  column-gap: 0.5rem;
 }
 
 .mentor .row .mentor-card:hover {
@@ -774,14 +775,14 @@ footer .cred p {
   margin-right: 5px;
   width: 95px;
 
-  border: 2px solid var(--second);
+  border: 2px solid var(--primary);
   padding: 12px 16px;
-  background-color: var(--second);
+  background-color: white;
   font-weight: bold;
   border-radius: 25px;
   align-items: center;
   text-align: center;
-  color: white;
+  color: var(--primary);
 }
 
 .tab-btn.active {
@@ -790,8 +791,8 @@ footer .cred p {
 }
 
 .tab-btn:hover {
-  background-color: white;
-  color: var(--primary);
+  background-color: var(--primary);
+  color: white;
   cursor: pointer;
 }
 
@@ -841,7 +842,7 @@ footer .cred p {
 }
 
 #book-now-btn {
-  padding: 10px 83px;
+  padding: 10px 80px;
   background-color: #F79500;
   color: #ffffff;
   border: none;
@@ -850,7 +851,8 @@ footer .cred p {
   border-radius: 10px;
   font-size: large;
 
-  margin-left: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 #book-now-btn:hover {
@@ -1081,6 +1083,11 @@ table td {
   .mentor .row .mentor-card {
     width: 20vh;
   }
+
+  #book-now-btn {
+    margin-left: 14%;
+    margin-right: 14%;
+  }
 }
 
 /*Phone*/
@@ -1121,7 +1128,8 @@ table td {
   }
 
   #book-now-btn {
-    margin-left: 25px;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 
   .one-third {
